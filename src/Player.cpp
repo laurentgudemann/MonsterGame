@@ -3,5 +3,5 @@
 void Player::levelUp()
 {
     ++m_level;
-    ++m_damagePerAttack;
+    ++m_damage;
 }

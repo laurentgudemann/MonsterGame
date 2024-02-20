@@ -5,7 +5,7 @@ class Player : public Creature
 {
 public:
     Player(std::string_view name)
-        : Creature(name, '@', 10, 1, 0) {}
+        : Creature(name, '@', 20, 1, 0) {}
 
     void levelUp();
 
