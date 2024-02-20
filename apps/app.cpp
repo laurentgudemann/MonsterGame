@@ -1,13 +1,28 @@
 #include <iostream>
 #include <string>
-#include <Creature.h>
+#include <string_view>
+#include <Player.h>
+
+void greetPlayer(std::string_view playerName)
+{
+    std::cout << "Welcome, "<< playerName << ".\n";
+}
+
+
+void printPlayer(const Player& player)
+{
+    std::cout << "You have " << player.getHealth() <<" health and are carrying " << player.getGold() <<" gold.\n";
+}
 
 int main()
 {
-	Creature o{ "orc", 'o', 4, 2, 10 };
-	o.addGold(5);
-	o.reduceHealth(1);
-	std::cout << "The " << o.getName() << " has " << o.getHealth() << " health and is carrying " << o.getGold() << " gold.\n";
+	std::cout << "Enter your name: ";
+    std::string playerName{};
+    std::cin >> playerName;
+    Player player{playerName};
+
+    greetPlayer(player.getName());
+    printPlayer(player);
 
 	return 0;
 }

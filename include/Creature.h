@@ -1,3 +1,5 @@
+#pragma once
+
 #include <string>
 #include <string_view>
 
@@ -20,9 +22,9 @@ public:
     void addGold(int amount);
 
 protected:
-    std::string m_name{""};
+    std::string m_name{};
     char m_symbol{};
-    int m_health{0};
-    int m_damagePerAttack{0};
-    int m_gold{0};
+    int m_health{};
+    int m_damagePerAttack{};
+    int m_gold{};
 };
