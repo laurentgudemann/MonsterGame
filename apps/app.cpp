@@ -2,6 +2,7 @@
 #include <string>
 #include <string_view>
 #include <Player.h>
+#include <Monster.h>
 
 void greetPlayer(std::string_view playerName)
 {
@@ -16,6 +17,8 @@ void printPlayer(const Player& player)
 
 int main()
 {
+    Monster m{ Monster::Type::orc };
+	std::cout << "A " << m.getName() << " (" << m.getSymbol() << ") was created.\n";
 	std::cout << "Enter your name: ";
     std::string playerName{};
     std::cin >> playerName;
